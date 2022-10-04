@@ -1,11 +1,12 @@
 server:
   port: 8081
-  spring:
-    datasource:
-      url: jdbc:mysql://localhost:3306/fornecedor
-      password: ${PASSWORD}
-      username: ${USER}
-    jpa:
-      hibernate:
-        ddl-auto: update
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/fornecedor
+    password: ${PASSWORD}
+    username: ${USER}
+  jpa:
+    hibernate:
+      ddl-auto: create
 #spring.jpa.show-sql: true
