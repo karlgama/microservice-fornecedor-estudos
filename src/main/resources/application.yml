@@ -2,11 +2,22 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: 'fornecedor'
   datasource:
     url: jdbc:mysql://localhost:3306/fornecedor
     password: ${PASSWORD}
     username: ${USER}
   jpa:
+    show-sql: true
     hibernate:
-      ddl-auto: create
-#spring.jpa.show-sql: true
+      ddl-auto: update
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      preferIpAddress: true
